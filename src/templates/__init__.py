@@ -31,8 +31,7 @@ def generate_latex(template_name, json_resume, prelim_section_ordering):
         line_statement_prefix="%-",
         line_comment_prefix="%#",
         trim_blocks=True,
-        autoescape=False,
-        loader=jinja2.FileSystemLoader(dir_path),
+        autoescape=True, loader=jinja2.FileSystemLoader(dir_path),
     )
 
     escaped_json_resume = escape_for_latex(json_resume)
